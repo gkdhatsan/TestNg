@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="3" name="Test2(failed)" parallel="tests">
+    <classes>
+      <class name="com.parallelexecution.ClassA">
+        <methods>
+          <include name="browser"/>
+          <include name="userNameA1"/>
+        </methods>
+      </class> <!-- com.parallelexecution.ClassA -->
+      <class name="com.parallelexecution.ClassF">
+        <methods>
+          <include name="userNameA1"/>
+          <include name="browser"/>
+        </methods>
+      </class> <!-- com.parallelexecution.ClassF -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+  <test thread-count="3" name="Test3(failed)" parallel="tests">
+    <classes>
+      <class name="com.parallelexecution.ClassE">
+        <methods>
+          <include name="userNameA1"/>
+          <include name="browser"/>
+        </methods>
+      </class> <!-- com.parallelexecution.ClassE -->
+      <class name="com.parallelexecution.ClassD">
+        <methods>
+          <include name="browser"/>
+          <include name="userNameA1"/>
+        </methods>
+      </class> <!-- com.parallelexecution.ClassD -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+  <test thread-count="3" name="Test1(failed)" parallel="tests">
+    <classes>
+      <class name="com.parallelexecution.ClassB">
+        <methods>
+          <include name="browser"/>
+          <include name="userNameA2"/>
+        </methods>
+      </class> <!-- com.parallelexecution.ClassB -->
+      <class name="com.parallelexecution.ClassC">
+        <methods>
+          <include name="userNameA3"/>
+          <include name="browser"/>
+        </methods>
+      </class> <!-- com.parallelexecution.ClassC -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite] -->
